@@ -1,0 +1,7 @@
+2025/11/24 11:21:12 maxprocs: Leaving GOMAXPROCS=10: CPU quota undefined
+panic: stat ../../configs: no such file or directory
+
+goroutine 1 [running]:
+main.main()
+	/Users/qianye/Downloads/找工作/Go/mylearn/RPC/Kratos8/review/cmd/review/main.go:72 +0x564
+exit status 2

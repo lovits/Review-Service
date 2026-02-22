@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package api.review.v1;
+
+import "errors/errors.proto";
+
+option go_package = "review/api/review/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.review.v1";
+
+enum ErrorReason {
+    option (errors.default_code) = 500;
+
+    NEED_LOGIN = 0 [(errors.code) = 401]; // 需要登录
+    DB_FAILED = 1 [(errors.code) = 500]; // 数据库操作失败
+    
+    ORDER_REVIEWED = 100 [(errors.code) = 400]; // 订单已评价
+}
